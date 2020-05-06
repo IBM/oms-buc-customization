@@ -51,7 +51,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     * Copy all the content under the folder `custom-oms-buc-customization` created in above steps, except the `.git` and `node_modules` folders and paste it to `temp/custom-oms-buc-customization`. Reconcile/merge the files and content as required.
     * `yarn install`
     * Create a new branch, commit all changes, push it and merge with develop branch.
-17. Refer wiki for additional information on recommended branches: [Application git setup](https://github.ibm.com/WCI/oms-buc-customization/wiki/Application-git-setup).
+17. Refer wiki for additional information on recommended branches: [Application git setup](https://github.com/IBM/oms-buc-customization/wiki/Application-git-setup).
 
 ## Mapping localhost to bucgenerichost
 
@@ -66,7 +66,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Starting the app server for local development
 
 `yarn start`: This will start the local development server over https at: `https://bucgenerichost:9000/oms-buc-customization`.
-* Once the BUC Customization entry for the application is provided details on wiki [here](https://github.ibm.com/WCI/oms-buc-customization/wiki/Custom-feature-ribbon-entry-for-DEV-tenant-per-customization-developer), it can be accessed from the ribbon in BUC with local development mode enabled on a DEV tenant.
+* Once the BUC Customization entry for the application is provided details on wiki [here](https://github.com/IBM/oms-buc-customization/wiki/Custom-feature-ribbon-entry-for-DEV-tenant-per-customization-developer), it can be accessed from the ribbon in BUC with local development mode enabled on a DEV tenant.
 * Since this angular https server does not have a valid certificate, on every server start, you will not be able to immediately view the application in BUC on clicking on the option in the ribbon. A temporary exception in browser for this certificate will be needed:
     1. Copy the url above in a new tab and accept the certificate error - this creates the exception in browser for the certificate.
     2. Click on the ribbon entry for your application again and now the content will be loaded in BUC.
@@ -77,9 +77,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Adding ribbon entry in BUC
 
 Completing this step will add a ribbon entry in BUC that can be used to access the custom application running locally.
-The steps and the corresponding content to be provided are detailed in the wiki page: [Custom feature ribbon entry for DEV tenant per customization developer](https://github.ibm.com/WCI/oms-buc-customization/wiki/Custom-feature-ribbon-entry-for-DEV-tenant-per-customization-developer)
+The steps and the corresponding content to be provided are detailed in the wiki page: [Custom feature ribbon entry for DEV tenant per customization developer](https://github.com/IBM/oms-buc-customization/wiki/Custom-feature-ribbon-entry-for-DEV-tenant-per-customization-developer)
 
 ## Uploading build artifacts to BUC
 
 Once feature development reaches some milestone, it would be merged into one of the main branches created.
-CI-CD pipeline can be used for building the artifacts on the main branches and uploading them to git. The wiki page [Uploading build artifacts to BUC](https://github.ibm.com/WCI/oms-buc-customization/wiki/Uploading-build-artifacts-to-BUC) explains this in detail.
+CI-CD pipeline can be used for building the artifacts on the main branches and uploading them to git. The wiki page [Uploading build artifacts to BUC](https://github.com/IBM/oms-buc-customization/wiki/Uploading-build-artifacts-to-BUC) explains this in detail.
