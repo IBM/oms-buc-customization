@@ -1,0 +1,9 @@
+{
+    "OMSHOME": {
+        "TITLE": "OMS Starter Page",
+        "DETAILS": "The file omshome.component.ts contains some more information about the utility classes and services available.",
+        "DESCRIPTION": "OMS getOrganizationList API response will be displayed on this page if OMS end point is configured and reachable. In case of errors, they will be displayed in the browser console.",
+        "LOADING": "Loading...",
+        "ERROR": "Some error occurred while contacting OMS. Refer to browser console or network tab for error details."
+    }
+}
