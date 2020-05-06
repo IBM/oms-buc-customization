@@ -1,0 +1,19 @@
+<div>
+  <h2>{{'IVHOME.TITLE' | translate}}</h2>
+</div>
+<div>
+<div>{{'IVHOME.DETAILS' | translate}}</div>
+<br>
+<div>{{'IVHOME.DESCRIPTION' | translate}}</div>
+<br>
+<div class="moderate-background">
+  <div *ngIf="isIVEnabled">
+    <pre *ngIf="distributionGroupsConfigurationByTenantIdStr != '' && distributionGroupsConfigurationByTenantIdStr != null">{{distributionGroupsConfigurationByTenantIdStr}}</pre>
+    <div *ngIf="distributionGroupsConfigurationByTenantIdStr == ''">{{'IVHOME.LOADING' | translate}}</div>
+    <div *ngIf="distributionGroupsConfigurationByTenantIdStr == null">{{'IVHOME.ERROR' | translate}}</div>
+  </div>
+  <div *ngIf="!isIVEnabled">
+    {{'IVHOME.CHECK_IV_ENABLED' | translate:{tenant: bucTenantId} }}
+  </div>
+</div>
+</div>

@@ -1,0 +1,10 @@
+{
+    "IVHOME": {
+        "TITLE": "Inventory Visibility Starter Page",
+        "DETAILS": "The file ivhome.component.ts contains some more information about the utility classes and services available.",
+        "DESCRIPTION": "IV getByTenantIdV1ConfigurationDistributionGroups response will be displayed on this page if IV end point is configured and reachable. In case of errors, they will be displayed in the browser console.",
+        "LOADING": "Loading...",
+        "ERROR": "Some error occurred while contacting IV. Refer to browser console or network tab for error details.",
+        "CHECK_IV_ENABLED": "Cannot call IV APIs as IV is not enabled for the current tenant with id: {{tenant}}."
+    }
+}
