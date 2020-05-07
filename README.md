@@ -48,7 +48,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 16. In case the newly created target git repo (`git@github.com:IBM/custom-oms-buc-customization.git`) has some content, or the refernce repo history is not desired:
     * Change to a temp parent folder: `mkdir temp` and `cd temp`
     * Clone the new repo here: `git clone git@github.com:IBM/custom-oms-buc-customization.git`
-    * Copy all the content under the folder `custom-oms-buc-customization` created in above steps, except the `.git` and `node_modules` folders and paste it to `temp/custom-oms-buc-customization`. Reconcile/merge the files and content as required.
+    * Copy all the content under the folder `custom-oms-buc-customization` created from steps 7 - 14, except the `.git` and `node_modules` folders and paste it to `temp/custom-oms-buc-customization`. Reconcile/merge the files and content as required.
     * `yarn install`
     * Create a new branch, commit all changes, push it and merge with develop branch.
 17. Refer wiki for additional information on recommended branches: [Application git setup](https://github.com/IBM/oms-buc-customization/wiki/Application-git-setup).
