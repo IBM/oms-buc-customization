@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BucSvcAngularModule } from '@buc/svc-angular';
+import { BucSvcAngularModule, BucSvcAngularStaticAppInfoFacadeUtil } from '@buc/svc-angular';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -47,8 +47,8 @@ export function omsBucCustomizationAppModuleHttpLoaderFactory(http: HttpClient) 
     TranslateModule.forRoot({
       loader: {
       provide: TranslateLoader,
-          useFactory: omsBucCustomizationAppModuleHttpLoaderFactory,
-          deps: [HttpClient]
+        useFactory: omsBucCustomizationAppModuleHttpLoaderFactory,
+        deps: [HttpClient]
       },
       isolate: true
     }),
@@ -68,5 +68,13 @@ export class AppModule extends BucCommonClassesAllModuleClazz {
   constructor(translateService: TranslateService,
               bucCommShellStaticPatternIframeService: BucCommShellStaticPatternIframeService) {
     super(translateService, bucCommShellStaticPatternIframeService);
+    /*
+      INFO:
+      Uncomment to point to any OMS end point for development. It can be customization team's central OMS or local DTK.
+      This switch over only activates for a DEV tenant when devMode is set to true for a feature. For all other cases
+      and tenants, the configured tenant OMS endpoint will be used. So, no special handling is required for QA, STAGE
+      and PROD tenants and the uncommented code can be pushed to git.
+    */
+    // BucSvcAngularStaticAppInfoFacadeUtil.setLocalDevModeCustomizationTeamOMSUrl('https://localhost:9443/smcfs/');
   }
 }
