@@ -1,0 +1,16 @@
+<div class="app-root bg-color">
+  <div class="app-region-header">
+    <h1 class="p-16" [translate]="'APP_COMPONENT.APP_NAME' | translate"></h1>
+  </div>
+  <div class="app-region-body p-16">
+    <div *ngIf="isBucTenantChangeSuccess && isBucJwtRefreshSuccess">
+      <router-outlet></router-outlet>
+    </div>
+    <div *ngIf="isInitialState">
+      <h1 [translate]="'APP_COMPONENT.MSG_LOADING'"></h1>
+    </div>
+    <div *ngIf="!isInitialState && !(isBucTenantChangeSuccess || isBucJwtRefreshSuccess)">
+      <h1 [translate]="'APP_COMPONENT.MSG_ERROR'"></h1>
+    </div>
+  </div>
+</div>

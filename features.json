@@ -1,0 +1,68 @@
+[
+  {
+    "featureId": "custom-oms-buc-customization-app",
+    "state": "ACTIVE",
+    "sequence": 6.1,
+    "title": "OMS BUC Customization App",
+    "iconName": "website-20",
+    "link": "/oms-buc-customization",
+    "path": "/oms-buc-customization",
+    "hidden": false,
+    "allowedRoles": [
+      "Fulfillment Manager",
+      "Tenant Administrator"
+    ],
+    "description": [
+      {
+        "locale": "en_US",
+        "language": "en",
+        "title": "OMS BUC Customization App"
+      }
+    ],
+    "type": "IFRAME"
+  },
+  {
+    "featureId": "custom-iv-starter-home",
+    "state": "ACTIVE",
+    "parentFeatureId": "custom-oms-buc-customization-app",
+    "sequence": 0,
+    "title": "IV Starter Home",
+    "iconName": "website-20",
+    "link": "/oms-buc-customization/home/ivhome",
+    "path": "/oms-buc-customization/home/ivhome",
+    "hidden": false,
+    "allowedRoles": [
+      "Fulfillment Manager"
+    ],
+    "description": [
+      {
+        "locale": "en_US",
+        "language": "en",
+        "title": "IV Starter Home"
+      }
+    ],
+    "type": "IFRAME"
+  },
+  {
+    "featureId": "custom-oms-starter-home",
+    "state": "ACTIVE",
+    "parentFeatureId": "custom-oms-buc-customization-app",
+    "sequence": 0.1,
+    "title": "OMS Starter Home",
+    "iconName": "website-20",
+    "link": "/oms-buc-customization/home/omshome",
+    "path": "/oms-buc-customization/home/omshome",
+    "hidden": false,
+    "allowedRoles": [
+      "Tenant Administrator"
+    ],
+    "description": [
+      {
+        "locale": "en_US",
+        "language": "en",
+        "title": "OMS Starter Home"
+      }
+    ],
+    "type": "IFRAME"
+  }
+]
