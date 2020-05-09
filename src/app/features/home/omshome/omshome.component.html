@@ -1,0 +1,14 @@
+<div>
+    <h2>{{'OMSHOME.TITLE' | translate}}</h2>
+</div>
+<div>
+  <div>{{'OMSHOME.DETAILS' | translate}}</div>
+  <br>
+  <div>{{'OMSHOME.DESCRIPTION' | translate}}</div>
+  <br>
+  <div class="moderate-background">
+    <pre *ngIf="getOrgListJsonStr != '' && getOrgListJsonStr != null">{{getOrgListJsonStr}}</pre>
+    <div *ngIf="getOrgListJsonStr == ''">{{'OMSHOME.LOADING' | translate}}</div>
+    <div *ngIf="getOrgListJsonStr == null">{{'OMSHOME.ERROR' | translate}}</div>
+  </div>
+</div>
