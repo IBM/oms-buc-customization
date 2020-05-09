@@ -1,0 +1,7 @@
+{
+    "APP_COMPONENT": {
+        "APP_NAME": "OMS BUC Customization Application",
+        "MSG_LOADING": "Loading...",
+        "MSG_ERROR": "Loading, refresh page if it is not redirecting to main page within 30 seconds."
+    }
+}
