@@ -20,4 +20,4 @@ ls -ls "${DIST_DIRECTORY}"
 cd "${DIST_DIRECTORY}" && zip -r assets.zip .
 
 # upload to BUC
-curl $ADDITONAL_CURL_OPTIONS -X POST $BUC_HOSTNAME/cw/spi/resources/customization/assets/upload -H "x-ibm-client-id: $CLIENT_ID" -H "x-ibm-client-secret: $CLIENT_SECRET" -H "accept: application/json" -H  "Content-Type: multipart/form-data" -F "asset=@assets.zip;type=application/x-zip-compressed"
+curl -v -X POST $BUC_HOSTNAME/cw/spi/resources/customization/assets/upload -H "x-ibm-client-id: $CLIENT_ID" -H "x-ibm-client-secret: $CLIENT_SECRET" -H "accept: application/json" -H  "Content-Type: multipart/form-data" -F "asset=@assets.zip;type=application/x-zip-compressed"
