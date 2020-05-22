@@ -11,28 +11,28 @@ cache:
   directories:
     - node_modules
 before_install:
-  - export COS_FOLDER_ID=$COS_FOLDER_ID_DEVELOP;
+  - export CUSTOMIZATION_CONTEXT_ROOT=$CUSTOMIZATION_CONTEXT_ROOT_DEVELOP;
   - export BUC_CLIENT_ID=$BUC_CLIENT_ID_DEVELOP;
   - export BUC_CLIENT_SECRET=$BUC_CLIENT_SECRET_DEVELOP;
   - if [[ "$TRAVIS_BRANCH" == "master" ]]; then
-      export COS_FOLDER_ID=$COS_FOLDER_ID_MASTER;
+      export CUSTOMIZATION_CONTEXT_ROOT=$CUSTOMIZATION_CONTEXT_ROOT_MASTER;
       export BUC_CLIENT_ID=$BUC_CLIENT_ID_MASTER;
       export BUC_CLIENT_SECRET=$BUC_CLIENT_SECRET_MASTER;
     fi
   - if [[ "$TRAVIS_BRANCH" == "release" ]]; then
-      export COS_FOLDER_ID=$COS_FOLDER_ID_RELEASE;
+      export CUSTOMIZATION_CONTEXT_ROOT=$CUSTOMIZATION_CONTEXT_ROOT_RELEASE;
       export BUC_CLIENT_ID=$BUC_CLIENT_ID_RELEASE;
       export BUC_CLIENT_SECRET=$BUC_CLIENT_SECRET_RELEASE;
     fi
   - if [[ "$TRAVIS_BRANCH" == "production" ]]; then
-      export COS_FOLDER_ID=$COS_FOLDER_ID_PRODUCTION;
+      export CUSTOMIZATION_CONTEXT_ROOT=$CUSTOMIZATION_CONTEXT_ROOT_PRODUCTION;
       export BUC_CLIENT_ID=$BUC_CLIENT_ID_PRODUCTION;
       export BUC_CLIENT_SECRET=$BUC_CLIENT_SECRET_PRODUCTION;
     fi
 script:
 #  - yarn lint
 #  - yarn test
-  - yarn build --source-map --base-href=$COS_FOLDER_ID/$APP_NAME/ --deploy-url=$COS_FOLDER_ID/$APP_NAME/
+  - yarn build --source-map --base-href=$CUSTOMIZATION_CONTEXT_ROOT/$APP_NAME/ --deploy-url=$CUSTOMIZATION_CONTEXT_ROOT/$APP_NAME/
 after_success:
   - if [[ ( "$TRAVIS_BRANCH" == "develop" || "$TRAVIS_BRANCH" == "master" || "$TRAVIS_BRANCH" == "release" || "$TRAVIS_BRANCH" == "production" ) && "$TRAVIS_PULL_REQUEST" == "false"  ]]; then
       ./publish-to-buc.sh ./dist $BUC_CLIENT_ID $BUC_CLIENT_SECRET;
