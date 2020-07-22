@@ -45,7 +45,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     * `git remote set-url origin git@github.com:IBM/custom-oms-buc-customization.git` - this sets the remote for the current folder as our new repository created assuming `git@github.com:IBM/custom-oms-buc-customization.git` is the new repository.
     * `git push -u origin develop` (as the default branch is develop on **oms-buc-customization**) - this will push all changes to develop branch on the new repository as well.
     * This will retain the history of the original reference repo: `git@github.com:IBM/oms-buc-customization.git`. If required, those can be removed. Alternately, **point16** can be used if retaining history is not desired.
-16. In case the newly created target git repo (`git@github.com:IBM/custom-oms-buc-customization.git`) has some content, or the refernce repo history is not desired:
+16. In case the newly created target git repo (`git@github.com:IBM/custom-oms-buc-customization.git`) has some content, or the reference repo history is not desired:
     * Change to a temp parent folder: `mkdir temp` and `cd temp`
     * Clone the new repo here: `git clone git@github.com:IBM/custom-oms-buc-customization.git`
     * Copy all the content under the folder `custom-oms-buc-customization` created from steps 7 - 14, except the `.git` and `node_modules` folders and paste it to `temp/custom-oms-buc-customization`. Reconcile/merge the files and content as required.
@@ -82,4 +82,4 @@ The steps and the corresponding content to be provided are detailed in the wiki 
 ## Uploading build artifacts to BUC
 
 Once feature development reaches some milestone, it would be merged into one of the main branches created.
-CI-CD pipeline can be used for building the artifacts on the main branches and uploading them to git. The wiki page [Uploading build artifacts to BUC](https://github.com/IBM/oms-buc-customization/wiki/Uploading-build-artifacts-to-BUC) explains this in detail.
+CI-CD pipeline can be used for building the artifacts on the main branches and uploading them to BUC. The wiki page [Uploading build artifacts to BUC](https://github.com/IBM/oms-buc-customization/wiki/Uploading-build-artifacts-to-BUC) explains this in detail.
