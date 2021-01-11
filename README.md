@@ -1,6 +1,6 @@
-# OmsBucCustomization
+# Order Hub Customization
 
-This project is created as a quick start project for the BUC customization teams. It follows our documented conventions for application development in BUC and will be used by the teams to validate their BUC customization configuration. Once the initial setup is complete and teams are able to launch the application in BUC, they will use this as the foundation for further application development.
+This project is created as a quick starter project for the teams that need to customize the Order Hub. It follows the documented conventions for application development in Order Hub and can be used by the teams to validate their Order Hub customization configuration. Once the initial setup is complete and teams are able to launch the application in Order Hub, they will use this as the foundation for further application development.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.3.
 
 ## Code scaffolding
@@ -55,7 +55,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Mapping localhost to bucgenerichost
 
-* To enable local development, BUC enables requests to come from `bucgenerichost`. The `localhost` needs to be mapped to this host name so that local angular development server can contact BUC. This will need to be done by every developer.
+* To enable local development, Order Hub enables requests to come from `bucgenerichost`. The `localhost` needs to be mapped to this host name so that local angular development server can contact Order Hub. This will need to be done by every developer.
 * Locate the `hosts` file on your machine (admin or root/sudo access required):
     * Windows 10: `C:\Windows\System32\drivers\etc\hosts`
     * Linux: `/etc/hosts`
@@ -66,20 +66,20 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Starting the app server for local development
 
 `yarn start`: This will start the local development server over https at: `https://bucgenerichost:9000/oms-buc-customization`.
-* Once the BUC Customization entry for the application is provided details on wiki [here](https://github.com/IBM/oms-buc-customization/wiki/Custom-feature-ribbon-entry-for-DEV-tenant-per-customization-developer), it can be accessed from the ribbon in BUC with local development mode enabled on a DEV tenant.
-* Since this angular https server does not have a valid certificate, on every server start, you will not be able to immediately view the application in BUC on clicking on the option in the ribbon. A temporary exception in browser for this certificate will be needed:
+* Once the Order Hub customization entry for your application is provided, details on wiki [here](https://github.com/IBM/oms-buc-customization/wiki/Custom-feature-ribbon-entry-for-DEV-tenant-per-customization-developer). It can be accessed from the ribbon in Order Hub with local development mode enabled on a DEV tenant.
+* Since this angular https server does not have a valid certificate, on every server start, you will not be able to immediately view the application in Order Hub on clicking on the option in the ribbon. A temporary exception in browser for this certificate will be needed:
     1. Copy the url above in a new tab and accept the certificate error - this creates the exception in browser for the certificate.
-    2. Click on the ribbon entry for your application again and now the content will be loaded in BUC.
-* This certificate issue will not occur on the BUC hosted url - once local development mode is disabled or on a non-DEV tenant.
+    2. Click on the ribbon entry for your application again and now the content will be loaded in Order Hub.
+* This certificate issue will not occur on the Order Hub hosted url - once local development mode is disabled or on a non-DEV tenant.
 
-**NOTE**: The application is designed to be rendered inside the shell as it provides user authentication, authorization and other security features, so the application tab will remain blank if `https://bucgenerichost:9000/oms-buc-customization` or the BUC hosted url is accessed outside shell in a new tab except for accepting certificate exception for DEV tenant.
+**NOTE**: The application is designed to be rendered inside the shell as it provides user authentication, authorization and other security features, so the application tab will remain blank if `https://bucgenerichost:9000/oms-buc-customization` or the Order Hub hosted url is accessed outside shell in a new tab except for accepting certificate exception for DEV tenant.
 
-## Adding ribbon entry in BUC
+## Adding ribbon entry in Order Hub
 
-Completing this step will add a ribbon entry in BUC that can be used to access the custom application running locally.
+Completing this step will add a ribbon entry in Order Hub that can be used to access the custom application running locally.
 The steps and the corresponding content to be provided are detailed in the wiki page: [Custom feature ribbon entry for DEV tenant per customization developer](https://github.com/IBM/oms-buc-customization/wiki/Custom-feature-ribbon-entry-for-DEV-tenant-per-customization-developer)
 
-## Uploading build artifacts to BUC
+## Uploading build artifacts to Order Hub
 
 Once feature development reaches some milestone, it would be merged into one of the main branches created.
-CI-CD pipeline can be used for building the artifacts on the main branches and uploading them to BUC. The wiki page [Uploading build artifacts to BUC](https://github.com/IBM/oms-buc-customization/wiki/Uploading-build-artifacts-to-BUC) explains this in detail.
+CI-CD pipeline can be used for building the artifacts on the main branches and uploading them to Order Hub. The wiki page [Uploading build artifacts to Order Hub](https://github.com/IBM/oms-buc-customization/wiki/Uploading-build-artifacts-to-BUC) explains this in detail.
